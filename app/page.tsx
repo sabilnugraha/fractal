@@ -1,59 +1,36 @@
-const units = [
-  ["Packages", "Reusable capabilities for larger systems."],
-  ["Agents", "Autonomous intelligence that can reason and act."],
-  ["Workflows", "Orchestrated logic from intent to execution."],
-  ["Connectors", "Bridges between data, tools, and context."],
-];
-
-const chips = ["Logic", "Signal", "Memory", "Action"];
+const modules = ["Agent", "Package", "Flow", "Data"];
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#e9edf5] px-6 py-6 text-[#151923] dark:bg-[#0b0f17] dark:text-[#e6edf3]">
-      <div className="pointer-events-none absolute left-10 top-32 h-28 w-28 rounded-[18px] bg-[#e9edf5] shadow-[14px_14px_28px_#c4cad8,-14px_-14px_28px_#ffffff] dark:bg-[#151b24] dark:shadow-[14px_14px_28px_#05070b,-14px_-14px_28px_#222b37]" />
-      <div className="pointer-events-none absolute right-16 top-28 h-40 w-40 rounded-[20px] border border-white/45 bg-white/25 shadow-[0_24px_80px_rgba(90,120,180,.18)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/[.07]" />
-      <div className="pointer-events-none absolute bottom-24 left-1/4 h-32 w-72 rounded-[22px] border border-white/40 bg-white/20 backdrop-blur-xl dark:border-white/10 dark:bg-white/[.05]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(91,141,239,.16),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(126,87,255,.14),transparent_28%)]" />
+    <main className="min-h-screen bg-[#c9dbe6] px-6 py-10 text-[#17191d]">
+      <section className="relative mx-auto min-h-[82vh] max-w-6xl overflow-hidden rounded-[22px] bg-[#f4f4f2] px-8 py-7 shadow-[0_35px_90px_rgba(30,45,60,.24)] md:px-16">
+        <div className="absolute inset-0 bg-[linear-gradient(112deg,rgba(255,255,255,.96),rgba(238,238,235,.86))]" />
+        <div className="absolute left-[30%] -top-28 h-[760px] w-[70px] rotate-[28deg] bg-black/[.055] blur-[2px]" />
+        <div className="absolute right-[28%] -top-24 h-[760px] w-[130px] rotate-[28deg] bg-white/40 blur-[6px]" />
 
-      <nav className="relative z-10 mx-auto flex max-w-6xl items-center justify-between rounded-[18px] bg-[#e9edf5] px-6 py-4 shadow-[12px_12px_24px_#c4cad8,-12px_-12px_24px_#ffffff] dark:bg-[#151b24] dark:shadow-[12px_12px_24px_#05070b,-12px_-12px_24px_#222b37]">
-        <div className="text-xl font-black tracking-tight">Fractl</div>
-        <div className="hidden gap-6 text-sm opacity-70 md:flex">
-          <span>System</span><span>Compose</span><span>Ecosystem</span>
-        </div>
-      </nav>
+        <nav className="relative z-10 flex items-center justify-between">
+          <div className="text-sm font-black tracking-[.08em]">FRACTL</div>
+          <div className="hidden gap-9 text-xs font-semibold text-black/45 md:flex"><span>System</span><span>Packages</span><span>Agents</span><span>Pricing</span></div>
+          <button className="rounded-[10px] bg-[#17191d] px-5 py-3 text-xs font-bold text-white">SIGN IN</button>
+        </nav>
 
-      <section className="relative z-10 mx-auto grid max-w-6xl gap-10 py-24 md:grid-cols-[1.05fr_.95fr] md:items-center">
-        <div>
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] opacity-60">Adaptive Systems Platform</p>
-          <h1 className="max-w-3xl text-5xl font-black leading-[.95] tracking-[-0.055em] md:text-7xl">Build Living Systems. Not Just Software.</h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 opacity-70">Fractl is a composable AI platform where intelligence is built as modular units—connected, orchestrated, and continuously evolving.</p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a className="rounded-[14px] bg-[#e9edf5] px-6 py-4 font-bold shadow-[9px_9px_18px_#c4cad8,-9px_-9px_18px_#ffffff] dark:bg-[#151b24] dark:shadow-[9px_9px_18px_#05070b,-9px_-9px_18px_#222b37]">Start Building</a>
-            <a className="rounded-[14px] border border-white/40 bg-white/25 px-6 py-4 font-bold backdrop-blur-xl dark:border-white/10 dark:bg-white/[.06]">Explore System</a>
+        <div className="relative z-10 grid min-h-[66vh] items-center gap-8 md:grid-cols-[.9fr_1.1fr]">
+          <div>
+            <p className="mb-5 text-[10px] font-bold uppercase tracking-[.28em] text-black/30">Compose every system</p>
+            <h1 className="max-w-xl text-5xl font-black leading-[1.05] tracking-[-.055em] md:text-6xl">Build Living Systems, Not Just Software</h1>
+            <p className="mt-6 max-w-md text-sm leading-6 text-black/48">Compose packages, agents, workflows, and connectors into adaptive intelligence that moves with your business.</p>
+            <div className="mt-8 flex gap-4"><button className="rounded-[9px] bg-[#17191d] px-6 py-3 text-xs font-black text-white">START BUILDING</button><button className="rounded-[9px] border border-black/10 bg-white/35 px-6 py-3 text-xs font-black backdrop-blur-md">EXPLORE</button></div>
           </div>
-        </div>
 
-        <div className="relative rounded-[22px] bg-[#e9edf5] p-7 shadow-[inset_12px_12px_24px_#c4cad8,inset_-12px_-12px_24px_#ffffff] dark:bg-[#151b24] dark:shadow-[inset_12px_12px_24px_#05070b,inset_-12px_-12px_24px_#222b37]">
-          <div className="absolute -right-5 top-8 rounded-[16px] border border-white/45 bg-white/30 px-5 py-3 text-sm font-bold shadow-[0_18px_60px_rgba(50,70,120,.18)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/[.08]">AI Layer</div>
-          <div className="rounded-[18px] bg-[#e9edf5] p-8 shadow-[14px_14px_28px_#c4cad8,-14px_-14px_28px_#ffffff] dark:bg-[#151b24] dark:shadow-[14px_14px_28px_#05070b,-14px_-14px_28px_#222b37]">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] opacity-50">System Core</p>
-            <h2 className="mt-8 text-7xl font-black tracking-[-0.1em]">F</h2>
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {chips.map((chip) => <span key={chip} className="rounded-[12px] border border-white/50 bg-white/25 px-4 py-3 text-sm font-bold backdrop-blur-xl dark:border-white/10 dark:bg-white/[.06]">{chip}</span>)}
+          <div className="relative flex min-h-[470px] items-center justify-center">
+            <div className="absolute h-[300px] w-[300px] rounded-[26px] bg-[#e9e9e6] shadow-[22px_22px_45px_rgba(90,96,105,.24),-18px_-18px_42px_rgba(255,255,255,.9)]" />
+            <div className="absolute h-[220px] w-[220px] rotate-45 rounded-[22px] border border-white/60 bg-white/18 shadow-[0_28px_80px_rgba(50,80,110,.18)] backdrop-blur-xl" />
+            <div className="relative grid grid-cols-2 gap-5">
+              {modules.map((item) => <div key={item} className="flex h-28 w-28 items-center justify-center rounded-[18px] bg-[#efefec] text-xs font-black text-black/55 shadow-[14px_14px_28px_rgba(126,132,140,.28),-12px_-12px_28px_rgba(255,255,255,.92)]">{item}</div>)}
             </div>
-            <p className="mt-8 leading-7 opacity-70">Packages, agents, workflows, and connectors working as one adaptive intelligence layer.</p>
+            <div className="absolute bottom-16 h-7 w-72 rounded-full bg-black/10 blur-xl" />
           </div>
         </div>
-      </section>
-
-      <section className="relative z-10 mx-auto grid max-w-6xl gap-5 pb-24 md:grid-cols-4">
-        {units.map(([title, body]) => (
-          <article key={title} className="rounded-[18px] bg-[#e9edf5] p-6 shadow-[12px_12px_24px_#c4cad8,-12px_-12px_24px_#ffffff] dark:bg-[#151b24] dark:shadow-[12px_12px_24px_#05070b,-12px_-12px_24px_#222b37]">
-            <div className="mb-7 h-10 w-10 rounded-[10px] border border-white/40 bg-white/25 backdrop-blur-xl dark:border-white/10 dark:bg-white/[.06]" />
-            <h3 className="text-xl font-black">{title}</h3>
-            <p className="mt-4 text-sm leading-6 opacity-65">{body}</p>
-          </article>
-        ))}
       </section>
     </main>
   );
