@@ -1,6 +1,3 @@
-import Image from "next/image";
-import fractAgent from "../assets/fract2.png";
-
 const navItems = ["Platform", "Packages", "Developers", "Ecosystem"];
 
 export default function Home() {
@@ -12,6 +9,10 @@ export default function Home() {
         <div className="orb orb-a" />
         <div className="orb orb-b" />
         <div className="orb orb-c" />
+        <div className="bg-piece piece-one" />
+        <div className="bg-piece piece-two" />
+        <div className="bg-piece piece-three" />
+        <div className="bg-piece piece-four" />
 
         <div className="glass-panel">
           <div className="glass-shine" />
@@ -28,39 +29,18 @@ export default function Home() {
             <button className="nav-button">Get Started</button>
           </nav>
 
-          <div className="hero-content">
-            <div className="hero-copy">
+          <div className="hero-content hero-content-centered">
+            <div className="hero-copy hero-copy-centered">
               <div className="eyebrow">Adaptive Systems Platform</div>
               <h1>Compose intelligence into living systems</h1>
               <p>
                 Build, connect, and monetize modular AI packages that adapt
                 together like a living architecture of intelligence.
               </p>
-              <div className="actions">
+              <div className="actions actions-centered">
                 <button>Start Building</button>
                 <button>Explore Packages</button>
               </div>
-            </div>
-
-            <div className="visual-stage asset-stage" aria-hidden="true">
-              <div className="asset-glow asset-glow-a" />
-              <div className="asset-glow asset-glow-b" />
-              <div className="asset-orbit orbit-one" />
-              <div className="asset-orbit orbit-two" />
-
-              <div className="agent-asset-wrap">
-                <Image
-                  src={fractAgent}
-                  alt=""
-                  className="agent-asset"
-                  priority
-                />
-              </div>
-
-              <div className="asset-chip chip-agent">Agent</div>
-              <div className="asset-chip chip-package">Package</div>
-              <div className="asset-chip chip-flow">Flow</div>
-              <div className="asset-shadow" />
             </div>
           </div>
         </div>
