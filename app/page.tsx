@@ -1,11 +1,7 @@
-const navItems = ["Platform", "Packages", "Developers", "Ecosystem"];
+import Image from "next/image";
+import fractAgent from "../assets/fract.png";
 
-const nodes = [
-  { label: "Agent", detail: "Autonomous unit", className: "node-top-left" },
-  { label: "Flow", detail: "Composable workflow", className: "node-top-right" },
-  { label: "Data", detail: "Living connector", className: "node-bottom-left" },
-  { label: "Logic", detail: "Adaptive package", className: "node-bottom-right" },
-];
+const navItems = ["Platform", "Packages", "Developers", "Ecosystem"];
 
 export default function Home() {
   return (
@@ -46,34 +42,25 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="visual-stage network-stage" aria-hidden="true">
-              <div className="network-glow" />
-              <div className="network-ring ring-1" />
-              <div className="network-ring ring-2" />
+            <div className="visual-stage asset-stage" aria-hidden="true">
+              <div className="asset-glow asset-glow-a" />
+              <div className="asset-glow asset-glow-b" />
+              <div className="asset-orbit orbit-one" />
+              <div className="asset-orbit orbit-two" />
 
-              <div className="network-line line-1" />
-              <div className="network-line line-2" />
-              <div className="network-line line-3" />
-              <div className="network-line line-4" />
-
-              <div className="network-core">
-                <div className="network-core-inner">
-                  <span className="core-dot dot-left" />
-                  <span className="core-dot dot-right" />
-                </div>
+              <div className="agent-asset-wrap">
+                <Image
+                  src={fractAgent}
+                  alt=""
+                  className="agent-asset"
+                  priority
+                />
               </div>
 
-              {nodes.map((node) => (
-                <div className={`network-node ${node.className}`} key={node.label}>
-                  <div className="node-badge" />
-                  <strong>{node.label}</strong>
-                  <small>{node.detail}</small>
-                </div>
-              ))}
-
-              <div className="network-pulse pulse-1" />
-              <div className="network-pulse pulse-2" />
-              <div className="soft-shadow" />
+              <div className="asset-chip chip-agent">Agent</div>
+              <div className="asset-chip chip-package">Package</div>
+              <div className="asset-chip chip-flow">Flow</div>
+              <div className="asset-shadow" />
             </div>
           </div>
         </div>
