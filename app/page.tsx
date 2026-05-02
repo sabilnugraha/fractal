@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fractAgent from "../assets/fract.png";
+import fractAgent from "../assets/fract2.png";
 
 const navItems = ["Platform", "Packages", "Developers", "Ecosystem"];
 
